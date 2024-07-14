@@ -9,7 +9,7 @@ Folder structure:
 │    └──  source code    (e.g.: yaml)
 ```
 
-Local installation and set up (Ubuntu).
+Local installation and set up (Ubuntu) is explained below.
 
 ## Step 1: Install Docker
 
