@@ -177,6 +177,12 @@ spec:
   backoffLimit: 4
 ```
 
+Set docker context:
+
+```
+docker context use default
+```
+
 Apply the Job configuration to your cluster:
 
 ```

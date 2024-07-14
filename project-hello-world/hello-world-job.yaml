@@ -7,7 +7,8 @@ spec:
     spec:
       containers:
         - name: hello
-          image: busybox
+          image: ubuntu:latest
+          imagePullPolicy: Always
           command: ["echo", "Hello, World!"]
       restartPolicy: Never
   backoffLimit: 4
