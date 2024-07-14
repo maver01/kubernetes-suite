@@ -149,7 +149,11 @@ curl -sS https://webinstall.dev/k9s | bash
 
 or check original documentation on github.
 
-This will open the k9s interface where you can navigate and manage your Kubernetes resources.
+Type the following to open the k9s interface where you can navigate and manage your Kubernetes resources.
+
+```
+k9s
+```
 
 ## Step 4: Create a Kubernetes Job
 
