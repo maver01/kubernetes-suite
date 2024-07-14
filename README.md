@@ -141,37 +141,13 @@ kubens
 
 ### k9s
 
-Download the latest release of k9s:
+Download using Webi:
 
 ```
-curl -s https://api.github.com/repos/derailed/k9s/releases/latest | grep browser_download_url | grep Linux_x86_64.tar.gz | cut -d '"' -f 4 | wget -qi -
+curl -sS https://webinstall.dev/k9s | bash
 ```
 
-Extract the downloaded tarball:
-
-```
-tar -xvf k9s_Linux_x86_64.tar.gz
-```
-
-Move the k9s binary to a directory in your PATH:
-
-```
-sudo mv k9s /usr/local/bin/
-```
-
-To verify that k9s is installed correctly, run the following command:
-
-```
-k9s version
-```
-
-You should see the version information of k9s if it is installed correctly.
-
-To start using k9s, simply run:
-
-```
-k9s
-```
+or check original documentation on github.
 
 This will open the k9s interface where you can navigate and manage your Kubernetes resources.
 
