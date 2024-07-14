@@ -6,7 +6,8 @@ Folder structure:
 
 ```
 └──  project            (e.g.: project-hello-world)
-│    └──  source code    (e.g.: yaml)
+│    └──  yaml file    (e.g.: configuration/.yaml)
+│    └──  source code    (e.g.: src/.py)
 ```
 
 Local installation and set up (Ubuntu) is explained below.
@@ -153,72 +154,4 @@ Type the following to open the k9s interface where you can navigate and manage y
 
 ```
 k9s
-```
-
-## Step 4: Create a Kubernetes Job
-
-A Kubernetes Job runs one or more pods to completion.
-
-Create a hello-world-job.yaml file with the following content:
-
-```
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: hello-world
-spec:
-  template:
-    spec:
-      containers:
-      - name: hello
-        image: busybox
-        command: ["echo", "Hello, World!"]
-      restartPolicy: Never
-  backoffLimit: 4
-```
-
-Set docker context:
-
-```
-docker context use default
-```
-
-Apply the Job configuration to your cluster:
-
-```
-kubectl apply -f hello-world-job.yaml
-```
-
-Verify the Job is created and check its status:
-
-```
-kubectl get jobs
-```
-
-Check the logs of the Job to see the output:
-
-```
-kubectl logs job/hello-world
-```
-
-## Step 5: Clean Up
-
-After verifying that your Job has run successfully, you might want to clean up the resources.
-
-Delete the Job:
-
-```
-kubectl delete -f hello-world-job.yaml
-```
-
-Stop Minikube (optional):
-
-```
-minikube stop
-```
-
-Delete Minikube cluster (optional):
-
-```
-minikube delete
 ```
