@@ -2,13 +2,11 @@
 
 This repository contains a series of examples that can be used to run kubernetes kluster.
 
-Folder structure: (missing)
+Folder structure:
 
 ```
-├──                 (e.g.: )
-│   └──             (e.g.: )
-│   │   └──         (e.g.: )
-│   │   │   └──     (e.g.: )
+└──  project            (e.g.: project-hello-world)
+│    └──  source code    (e.g.: yaml)
 ```
 
 Local installation and set up (Ubuntu).
