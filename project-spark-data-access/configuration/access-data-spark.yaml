@@ -6,8 +6,8 @@ spec:
   template:
     spec:
       containers:
-        - name: python-container
-          image: maver02/access-data-spark:latest
-          imagePullPolicy: Always
+        - name: python-container-2
+          image: access-data-spark:v2
+          imagePullPolicy: Never
       restartPolicy: Never
   backoffLimit: 4
