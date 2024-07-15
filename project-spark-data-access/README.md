@@ -110,3 +110,23 @@ kubectl logs <pod-name>
 ```
 
 Replace <pod-name> with the actual name of the pod created by the Job.
+
+## Step 8: Docker cleanup (if needed)
+
+First, stop all running containers to ensure you can safely remove the images.
+
+```
+docker stop $(docker ps -q)
+```
+
+Next, remove all containers, both running and stopped.
+
+```
+docker rm $(docker ps -a -q)
+```
+
+Finally, remove all Docker images.
+
+```
+docker rmi $(docker images -q)
+```
